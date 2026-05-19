@@ -1,7 +1,14 @@
-function boxColor ({color, value}) {
+function BoxColor({ color, value }) {
+  const isMatch = value === color;
+
   return (
-    <>
-    </> 
-  )
+    <div
+      className={`box ${color}`}
+      style={{ backgroundColor: isMatch ? color : '' }}
+    >
+      {isMatch ? value : 'no soy el color'}
+    </div>
+  );
 }
-export default boxColor;  
+
+export default BoxColor;
